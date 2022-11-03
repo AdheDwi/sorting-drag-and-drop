@@ -1,0 +1,196 @@
+.sc-event {
+  width: 100%;
+}
+.sc-event-tab {
+  position: relative;
+  border-bottom: 1px solid $color-basic-80;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.sc-event-tab-item {
+  padding: 0 15px 20px 15px;
+  border-bottom: 2px solid transparent;
+  color: $color-primary;
+  font-weight: 500;
+  position: relative;
+  bottom: -1px;
+  cursor: pointer;
+  &:first-child {
+    padding: 0 15px 20px 0;
+  }
+  &.active {
+    border-color: $color-primary;
+  }
+}
+.sc-event-action {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.schedule-card {
+  border: 1px solid $color-basic-80;
+  padding: 24px;
+  border-radius: 8px;
+  p {
+    font-weight: 500;
+  }
+}
+.session-card {
+  border: 1px solid $color-basic-80;
+  border-radius: 8px;
+  margin: 30px 0 0;
+  background-color: $color-white;
+}
+.session-card-header {
+  padding: 1rem 1.5rem 1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// .session-card-body {
+//   height: fit-content;
+// }
+.session-card-header-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-session-input,
+.card-session-input:hover,
+.card-session-input:focus,
+.card-session-input:focus-visible,
+.card-session-input:visited {
+  width: auto;
+  // min-width: 200px;
+  border: unset;
+  border-bottom: 1px solid $color-basic-80;
+  outline: unset;
+  box-shadow: unset;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.card-session-name {
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+.session-card-action {
+  margin: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  p {
+    font-weight: 500;
+    margin-left: 1rem;
+  }
+}
+
+.lesson-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 1.5rem;
+  background-color: $color-white;
+  &:hover {
+    background-color: $color-basic-bg-hover;
+    .button-icon {
+      background-color: $color-basic-bg-hover;
+      border-color: $color-basic-bg-hover;
+    }
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 1rem 0.5rem;
+    border: 1px solid $color-basic-80;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+}
+.lesson-card-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  @media (max-width: 480px) {
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.lesson-card-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  @media (max-width: 480px) {
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.card-lesson-content {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.title-lesson,
+.title-lesson:hover {
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $color-text-100;
+  text-decoration: unset;
+  z-index: 1;
+}
+.status-lesson {
+  display: flex;
+  padding: 0 0.5rem;
+  border-left: 1px solid $color-basic-80;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $color-primary;
+}
+.note-lesson {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  align-items: center;
+  color: $color-text-80;
+}
+.dot-space {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lesson-attribute,
+.download-lesson,
+.download-lesson:hover {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  align-items: center;
+  color: $color-text-100;
+  text-decoration: unset;
+  z-index: 1;
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    .dot-space {
+      display: none;
+    }
+  }
+}
+.lesson-action {
+  margin-left: 1rem;
+  @media (max-width: 480px) {
+    margin-left: 0;
+  }
+}

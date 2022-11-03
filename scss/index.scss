@@ -1,20 +1,74 @@
-$color-primary: #16abf8;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+$color-primary: #7800ef;
+$color-primary-50: #6c00d9;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-white-50: #f1f1f1;
+$color-grey: #808080;
+
+$color-basic-80: #dfe5ee;
+$color-basic-bg: #f6f8fc;
+$color-basic-bg-hover: #fbfaff;
+$color-text-50: #bcc0d0;
+$color-text-80: #8189a2;
+$color-text-100: #252a3c;
+
+$f-family: "SF Pro Display", sans-serif;
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: $f-family;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
-  color: #111111;
+  font-size: 16px;
+  color: $color-text-100;
+  position: relative;
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-family: $f-family;
+  color: $color-text-100;
+}
+
+.content-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.title-page {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0 1rem 0 0 !important;
+}
+.text-note {
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 140%;
+  color: $color-text-50;
+}
+
+@import "components";
+
 .page-container {
   width: 100%;
   background-color: #f4f4f4;
   min-height: 100vh;
   position: relative;
+  background-color: $color-basic-bg;
 }
 .header {
   width: 100%;
@@ -41,12 +95,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.title-page {
-  font-size: 36px;
-  color: #111111;
-  margin: 0;
-  font-weight: 700;
 }
 .btn-big {
   height: 50px;

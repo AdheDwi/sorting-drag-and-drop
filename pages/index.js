@@ -1,36 +1,21 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from "react"
 
-import { wrapper } from "../redux/store";
-import Header from "../components/header";
-import ActivityContainer from "../containers/activityContainer";
-import { getActivityListAction } from "../redux/actions/todoAction";
+import Header from "components/Header/Header"
+import HeaderContent from "components/Header/HeaderContent"
+import EventPage from "components/EventPage/EventPage"
 
 const Home = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getActivityListAction());
-    console.log("masuk");
-  }, []);
-
-  const { loadingActivityList, errActivityList, dataActivityList } =
-    useSelector((state) => state.todo);
-
   return (
     <>
       <Header />
-      <ActivityContainer />
+      <div className="content-wrapper">
+        <div className="container">
+          <HeaderContent />
+          <EventPage />
+        </div>
+      </div>
     </>
-  );
-};
+  )
+}
 
-// export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
-//   store.dispatch(getActivityListAction());
-// });
-
-// export const getStaticProps = wrapper.getStaticProps((store) => () => {
-//   store.dispatch(getActivityListAction());
-// });
-
-export default Home;
+export default Home

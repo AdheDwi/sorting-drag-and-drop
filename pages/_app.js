@@ -1,9 +1,8 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles.scss";
-import { wrapper } from "../redux/store";
+import "bootstrap/dist/css/bootstrap.min.css"
+import "scss/index.scss"
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return <Component {...pageProps} />
 }
 
-export default wrapper.withRedux(MyApp);
+export default MyApp
